@@ -116,9 +116,10 @@ int main(int argc, char *argv[]) {
         fprintf(file, "Heap Sort = %.6f seconds\n\n", timeHeapSort(vecHSort, vecSize[i]));
         fclose(file);
         printf(" Done.\n\n");
+
+        free(vecISort);
+        free(vecHSort);
     }
 
-    free(vecISort);
-    free(vecHSort);
     return 0;
 }
